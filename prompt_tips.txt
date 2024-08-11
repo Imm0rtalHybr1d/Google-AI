@@ -20,8 +20,3 @@ Learn from feedback: Incorporate insights from others to enhance prompt effectiv
 Leverage role-playing: Assign a specific role to the model (e.g., expert, tutor, storyteller).
 Utilize keywords: Incorporate relevant keywords to guide the model's focus.
 Consider the model's capabilities: Understand the model's strengths and limitations.
-
-Additional Tips
-Leverage role-playing: Assign a specific role to the model (e.g., expert, tutor, storyteller).
-Utilize keywords: Incorporate relevant keywords to guide the model's focus.
-Consider the model's capabilities: Understand the model's strengths and limitations.
