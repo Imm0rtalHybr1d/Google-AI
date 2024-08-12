@@ -3,13 +3,13 @@ import os
 import datetime
 
 # Replace YOUR_API_KEY with your actual API key that you can get from https://cloud.google.com/
-API_KEY: str ='you ai key'
+API_KEY: str ='your own API key'
 genai.configure(api_key=API_KEY)
 model: genai.GenerativeModel = genai.GenerativeModel('gemini-1.5-flash')
 
 """This function gives the user a brief on how to create a prompt 
    and then asks use to create their own prompt """
-def get_topic() -> str:    
+def get_promt_tips() -> str:    
     prompt_file_path: str = f'prompt_tips.txt'
     
     try:
@@ -88,7 +88,6 @@ def get_ai_response(full_prompt:str|None = None) -> None:
             save_response(ai_response, full_prompt) #calls function that save's AI response to a markdown file for later 
         full_prompt = None
         continue
-    
          
 def save_response(ai_response:str, user_prompt:str) -> None:
     now = datetime.datetime.now()
@@ -109,13 +108,11 @@ def save_response(ai_response:str, user_prompt:str) -> None:
         print(f'{'':_^70}')
         print('')
 
-
-
 def main():
     os.system(r'cls')
     want_ptompt: str = input("Would you like to be assisted with creating a promt: y/n ")
     if want_ptompt.lower() == 'y':
-        user_promt: str = get_topic()
+        user_promt: str = get_promt_tips()
         get_ai_response(user_promt)      
     else:
         get_ai_response()
