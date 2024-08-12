@@ -3,17 +3,16 @@ import os
 import datetime
 
 # Replace YOUR_API_KEY with your actual API key that you can get from https://cloud.google.com/
-API_KEY: str ='your own API key'
+API_KEY: str ='your own API'
 genai.configure(api_key=API_KEY)
 model: genai.GenerativeModel = genai.GenerativeModel('gemini-1.5-flash')
 
 """This function gives the user a brief on how to create a prompt 
    and then asks use to create their own prompt """
 def get_promt_tips() -> str:    
-    prompt_file_path: str = f'prompt_tips.txt'
-    
+     
     try:
-        with open(prompt_file_path, mode='r') as file:
+        with open('prompt_tips.txt', mode='r') as file:
             for line in file:
                 print(f'{line}',end="")
 
